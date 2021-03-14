@@ -60,7 +60,11 @@ class Student
   end
 
   def self.all_students_in_grade_9
-    return "SELECT students.name FROM students WHERE grade = 9"
+    sql = <<-SQL
+      SELECT *
+      FROM students
+      WHERE grade = 9
+    SQL
   end
 
 end
